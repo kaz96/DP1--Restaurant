@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="">
+<head>
+	<title>Pharmacy Menu</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-slace=1.0" />
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/main.css" rel="stylesheet" />
+
+</head>
+<body>
+	<div class="container">
+		<!-- Row 1 start -->
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 class="text-center">Swin Delivery</h1>
+			</div>
+		</div>
+		<!-- Row 1 end -->
+		<!-- Row 2 start -->
+	<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="main.html"><span class="glyphicon glyphicon-home"></span></a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="main.html">Home</a></li>
+			<li><a href="">Menu</a></li>
+			<li><a href="#">Page 2</a></li>
+			<li><a href="#">Page 3</a></li>
+		</ul>
+	</div>
+</nav>
+	</div>
+
+			<div class="container">
+
+	<div data-ng-init ="stores = [
+{sName:'Terry`s Pizza', Cuisine:'Italian', oTimes:'12:30pm - 6:30pm', MinOrder:'$25.00',Address:'623 Parley Street'}
+
+,{sName:'Delhi Belly', Cuisine:'Indian', oTimes:'8:30am - 4:00pm', MinOrder:'$20.00',Address:'34 Trino Avenue'}
+
+,{sName:'Bobert`s Food', Cuisine:'BBQ', oTimes:'10:00am - 4:00pm', MinOrder:'$30.00',Address:'452 Redbridge Rd'}
+
+,{sName:'Frying Nemo', Cuisine:'Fish & Chips', oTimes:'12:00pm - 5:00pm', MinOrder:'$15:00',Address:'75 Windsor Street'}
+
+,{sName:'Toni`s BBQ ', Cuisine:'Japanese', oTimes:'7:00am - 12:00pm', MinOrder:'$30:00',Address:'352 Ceder Road'}
+
+,]">
+				</div>
+	<div class= "table-responsive">
+		<table class="table table-bordered table-striped">
+					<tr>
+						<th class="col-sm-1">Store Name</th>
+						<th class="col-sm-1">Cuisine</th>
+						<th class="col-sm-1">Opening Times</th>
+						<th class="col-sm-1">Minimun Order</th>
+						<th class="col-sm-1">Address</th>
+						<th class="col-sm-1">Menu</th>
+					</tr>
+					<tr data-ng-repeat="x in stores">
+						<td>{{ x.sName }}</td>
+						<td>{{ x.Cuisine }}</td>
+						<td>{{ x.oTimes }}</td>
+						<td>{{ x.MinOrder }}</td>
+						<td>{{ x.Address }}</td>
+						<td><a class="btn" href="menu.html/{{x.sName}}">View Menu</a></td>
+			</tr>
+	</table>
+		</div>
+	</div>
+
+	<!-- jQuery - required for Bootstrap's JavaScript plugins -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		crossorigin="anonymous"></script>
+	<script src="js/jquery.min.js"></script>
+	<!-- All Bootstrap plug-ins file -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Basic AngularJS -->
+	<script src="js/angular.min.js"></script>
+	 <!-- Login controller -->
+	<script src="js/main.js"></script>
+</body>
+</html>
